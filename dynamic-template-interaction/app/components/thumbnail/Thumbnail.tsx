@@ -11,6 +11,8 @@ interface IThumbnail {
 
 export default function Thumbnail({ colors, imagePath }: IThumbnail) {
   const [colorStrip, setColorStrip] = useState<Color[]>(colors);
+  const [hoverColorSquare, setHoverColorSquare] = useState<string>("");
+  const [isCopied, setIsCopied] = useState(false);
 
   useEffect(() => {
     setColorStrip(colors);
@@ -32,7 +34,32 @@ export default function Thumbnail({ colors, imagePath }: IThumbnail) {
               <div
                 className={styles.colorSquare}
                 style={{ background: c.hex }}
-              />
+                onMouseOver={() => {
+                  setHoverColorSquare(c.hex);
+                }}
+                onMouseLeave={() => {
+                  setHoverColorSquare("");
+                  setIsCopied(false);
+                }}
+              >
+                {hoverColorSquare === c.hex && (
+                  <div
+                    className={styles.copyText}
+                    onClick={() => {
+                      navigator.clipboard
+                        .writeText(c.hex)
+                        .then(() => {
+                          setIsCopied(true);
+                        })
+                        .catch((error) => {
+                          console.error("Error copying to clipboard", error);
+                        });
+                    }}
+                  >
+                    {isCopied ? <span>&#10004;</span> : "Copy"}
+                  </div>
+                )}
+              </div>
               <div className={styles.colorSquareName}>
                 <div style={{ textDecoration: "underline" }}>{c.name}</div>
                 <ColorPickerPopover

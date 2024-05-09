@@ -25,6 +25,7 @@ export default function ColorPalette({ data }: IColorPalette) {
         colors={template.combination.colors}
       />
       <RelatedCombinations
+        combinations={data}
         getTemplateId={(templateId) => {
           const foundTemplate = data.find(
             (d) => d.combination.id === templateId

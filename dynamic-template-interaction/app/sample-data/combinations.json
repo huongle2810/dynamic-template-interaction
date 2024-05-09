@@ -84,7 +84,7 @@
           "id": 656,
           "name": "Sunlit Eggplant",
           "slug": "sunlit-eggplant",
-          "colors": ["##efd3b5", "#5f093d", "#b21368", "#d67ba8"],
+          "colors": ["#efd3b5", "#5f093d", "#b21368", "#d67ba8"],
           "likes": 3765,
           "liked": true
         }
