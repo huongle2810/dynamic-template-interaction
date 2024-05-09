@@ -1,0 +1,23 @@
+.browseTemplate {
+  max-width: 800px;
+  margin: 0 auto;
+  height: 500px;
+}
+
+.browseTemplateTitle {
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 24px;
+  text-align: center;
+  margin-bottom: 48px;
+  margin-top: 120px;
+}
+
+.browseButton {
+  font-size: 16px;
+  padding: 12px 8px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  display: flex;
+}
