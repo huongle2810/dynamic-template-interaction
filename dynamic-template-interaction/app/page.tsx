@@ -1,4 +1,4 @@
-import ColorPalette from "./components/ColorPalette";
+import ColorPalette from "./components/color-palette/ColorPalette";
 import styles from "./page.module.css";
 import { getLocalData } from "./sample-data/processed-data";
 

@@ -1,0 +1,31 @@
+.thumbnailContainer {
+  max-width: 800px;
+  width: 60%;
+  height: 600px;
+  border-radius: 8px;
+  background-color: beige;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-size: contain;
+}
+
+.colorStrip {
+  display: flex;
+  position: absolute;
+  bottom: -96px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.colorSquare {
+  height: 120px;
+}
+
+.colorSquareName {
+  margin: 24px;
+  text-align: center;
+  font-size: 16px;
+  line-height: 24px;
+}
