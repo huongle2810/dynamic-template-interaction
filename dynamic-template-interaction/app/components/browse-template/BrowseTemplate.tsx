@@ -10,9 +10,14 @@ export default function BrowseTemplate({ mainColor }: IBrowseTemplate) {
       <div className={styles.browseTemplateTitle}>
         Use this color palette and create beautiful designs and documents!
       </div>
-      <button className={styles.browseButton} style={{ background: mainColor }}>
-        Browse templates
-      </button>
+      <div className={styles.buttonContainer}>
+        <button
+          className={styles.browseButton}
+          style={{ background: mainColor }}
+        >
+          Browse templates
+        </button>
+      </div>
     </div>
   );
 }

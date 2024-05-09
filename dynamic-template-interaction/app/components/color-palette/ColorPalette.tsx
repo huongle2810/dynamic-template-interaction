@@ -32,7 +32,6 @@ export default function ColorPalette({ data }: IColorPalette) {
           if (foundTemplate) {
             setTemplate(foundTemplate);
           }
-          console.log({ templateId, foundTemplate });
         }}
         relatedCombinations={template.relatedCombinations}
       />

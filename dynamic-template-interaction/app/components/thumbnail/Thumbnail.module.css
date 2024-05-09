@@ -8,13 +8,15 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-size: contain;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .colorStrip {
   display: flex;
-  position: absolute;
-  bottom: -96px;
+  position: relative;
+  top: 480px;
   width: 100%;
   cursor: pointer;
 }

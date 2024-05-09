@@ -1,0 +1,14 @@
+.colorPickerPopover {
+  display: flex;
+  justify-content: center;
+}
+
+.customizeColorInput {
+  visibility: hidden;
+  width: 0px;
+}
+
+.colorCode {
+  cursor: pointer;
+  text-transform: uppercase;
+}

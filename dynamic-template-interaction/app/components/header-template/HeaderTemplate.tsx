@@ -11,15 +11,18 @@ export default function HeaderTemplate({
   mainColorName,
   mainColor,
 }: HeaderTemplate) {
-  const { h, s, l } = hexToHSL(mainColor);
+  const { l } = hexToHSL(mainColor);
   return (
     <div
       style={{
-        background: `linear-gradient(to bottom, hsl(${h}, ${s}%, ${l}%), hsl(${h}, 80%, 95%))`,
+        background: mainColor,
       }}
       className={`${styles.headerTemplateContainer} ${styles.bgWave}`}
     >
-      <div className={styles.headerTitle}>
+      <div
+        style={{ color: `${l > 50 ? "#000" : "#ffff"}` }}
+        className={styles.headerTitle}
+      >
         <div>{mainColorName}</div>
         <div>color combination</div>
       </div>
